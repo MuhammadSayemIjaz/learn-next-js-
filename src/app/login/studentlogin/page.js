@@ -2,7 +2,9 @@ import React from 'react'
 
 const StudentLogin = () => {
   return (
-    <div>StudentLogin</div>
+    <div className='main'>
+      <h1>Student Login</h1>
+    </div>
   )
 }
 

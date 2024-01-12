@@ -1,0 +1,33 @@
+.main {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     gap: 30px;
+     min-height: 90vh;
+}
+
+.main h1 {
+     font-size: 30px;
+     font-weight: 800;
+}
+
+.main a {
+     text-decoration: underline;
+     /* font-weight: 800; */
+}
+
+nav {
+     padding: 20px 0;
+     border-bottom: 2px solid red;
+     background-color: #3f3f3f;
+}
+
+nav ul {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     color: white;
+     height: 100%;
+     font-size: 18px;
+}

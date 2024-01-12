@@ -25,3 +25,4 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 4). Routing
 5). Links and Navigation
 6). Nested Routing
+7). Layouts in nexjs

@@ -8,9 +8,11 @@ const Login = () => {
   const navigate = (name) => (route.push(name))
   return (
     <>
-      <div>Login page</div>
-      <Link href={"/"}>Go  to Home Page</Link>
-      <button onClick={() => navigate("/")}>Go to Home</button>
+      <div className='main'>
+        <h1>Login page</h1>
+        <Link href={"/"}>Go  to Home Page</Link>
+        <button onClick={() => navigate("/")}>Go to Home</button>
+      </div>
     </>
   )
 }
