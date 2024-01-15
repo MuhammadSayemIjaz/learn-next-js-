@@ -28,3 +28,6 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 7). Layouts in nexjs
 8). Conditional Layout
 9). Dynamic Routing
+10). Catch-all segments of Route
+11). Route Specific 404 page 
+13). Global 404 page 
