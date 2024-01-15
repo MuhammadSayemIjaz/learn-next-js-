@@ -9,7 +9,7 @@ const StudentData = ({ params }) => {
                <div className='main'>
                     <h1>Student Data</h1>
                     <h3>Name : {params.student}</h3>
-                    <Link href={"/login/studentlogin"}>Back To Student Login</Link>
+                    <Link href={"/studentslist"}>Back To Student Login</Link>
                </div>
           </>
      )

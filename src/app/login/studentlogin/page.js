@@ -3,39 +3,47 @@ import Link from 'next/link'
 import React from 'react'
 
 const StudentLogin = () => {
-  const students = [{
-    id: 1,
-    name: "John",
-    rollNo: "ABC1234",
-    class: "9th"
-  },
-  {
-    id: 2,
-    name: "Doe",
-    rollNo: "ABC2345",
-    class: "10th"
-  }, {
-    id: 3,
-    name: "Alex",
-    rollNo: "ABC3456",
-    class: "9th"
-  }, {
-    id: 4,
-    name: "Wanda",
-    rollNo: "ABC4567",
-    class: "11th"
-  }]
+
+  const login_user = (e) => {
+    e.preventDefault();
+    alert("Student login Successfully");
+  }
   return (
     <div className='main'>
-      <h1>Student Login</h1>
-      <h2>
-        Students List
-      </h2>
-      <ul>
-        {students.map((value, index) => (<li key={value.id}>
-          <Link href={`/login/studentlogin/${value.name}`}> Name:  {value.name} </Link>
-        </li>))}
-      </ul>
+      <div className="login_form border p-7 rounded-md shadow-md">
+        <form>
+          <div class="">
+            <div class="border-b border-gray-900/10 pb-12">
+              <h1 class=" text-base text-center font-semibold leading-7 text-gray-900">Student Login</h1>
+
+              <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 ">
+                <div class="col-span-full">
+                  <label for="user-name" class="block text-sm font-medium leading-6 text-gray-900">User name</label>
+                  <div class="mt-2">
+                    <input type="text" name="user-name" id="user-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                  </div>
+                </div>
+                <div class="col-span-full">
+                  <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+                  <div class="mt-2">
+                    <input id="email" name="email" type="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                  </div>
+                </div>
+                <div class="col-span-full">
+                  <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+                  <div class="mt-2">
+                    <input id="password" name="password" type="password" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 flex items-center justify-center gap-x-6">
+            <button class=" rounded-md bg-indigo-600 px-7 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" onClick={login_user}> Login</button>
+          </div>
+        </form>
+      </div>
     </div>
   )
 }
