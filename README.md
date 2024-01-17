@@ -32,3 +32,4 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 11). Route Specific 404 page 
 13). Global 404 page 
 14). Use of Middleware
+15). Fetch API data in Client Side Component 
