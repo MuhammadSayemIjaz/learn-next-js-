@@ -18,7 +18,7 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 ===================================================
                     Topics Coverd                  
 ===================================================
-
+```bash
 1). Functions & Events
 2). Next JS Folder Structure
 3). Next Js Component Types (Client & Server Side Components)
@@ -34,3 +34,4 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 14). Use of Middleware
 15). Fetch API data in Client Side Component 
 16). Fetch API data in Server Side Component 
+```
