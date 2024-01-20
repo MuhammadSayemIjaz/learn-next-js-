@@ -34,4 +34,5 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 14). Use of Middleware
 15). Fetch API data in Client Side Component 
 16). Fetch API data in Server Side Component 
+17). PreReddring vs Client Components
 ```
