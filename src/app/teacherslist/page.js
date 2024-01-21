@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TeachersInfo } from "./TeachersInfo";
 
 async function teachersList() {
      let data = await fetch('https://dummyjson.com/users')
@@ -15,6 +16,7 @@ const TeachersLogin = async () => {
                     <Link href={`/teacherslist/${items.id}`} key={items.id} >
                          <h1>Name : {items.firstName + "  " + items.lastName}</h1>
                     </Link>
+                         <TeachersInfo id={items.id} />
                </>))}
           </>
      )
