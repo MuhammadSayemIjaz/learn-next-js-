@@ -15,6 +15,9 @@ const StudentsList = () => {
         const { users } = data;
         setStudents(users);
         console.log(users)
+      }).catch((error) => {
+          console.log(error.code);
+          console.log(error);
       });
   }
 
