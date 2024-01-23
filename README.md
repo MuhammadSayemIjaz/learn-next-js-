@@ -36,4 +36,5 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 16). Fetch API data in Server Side Component 
 17). PreReddring vs Client Components
 18). Use Client Components with Server Components
+19). Style components using css modules
 ```
