@@ -13,7 +13,7 @@ const TeachersLogin = async () => {
 
      return (
           <>
-               <h1 className="text-center">Teachers List</h1>
+               <h1 className={style.heading}>Teachers List</h1>
                <div className={style.container}>
                     {dataList.users.map((items) => (<>
                          <div>
@@ -21,13 +21,13 @@ const TeachersLogin = async () => {
                                    <div className={style.card}>
                                         {/* <div className='card-img-container'>
                               </div> */}
-                                        <div className='card-text-container'>
-                                             <h1 className='card-heading'>{items.firstName + "  " + items.lastName}</h1>
+                                        <div className={style.card_text_container}>
+                                             <h1 className={style.card_heading}>{items.firstName + "  " + items.lastName}</h1>
                                              {/* <p className='card-details'></p> */}
                                         </div>
                                    </div>
                               </Link>
-                              <TeachersInfo id={items.id} />
+                              {/* <TeachersInfo id={items.id} /> */}
                          </div>
                     </>))}
                </div>
