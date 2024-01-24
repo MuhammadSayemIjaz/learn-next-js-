@@ -20,7 +20,8 @@ const TeachersLogin = async () => {
                               <Link href={`/teacherslist/${items.id}`} key={items.id} >
                                    <div className={style.card}>
                                         {/* <div className='card-img-container'>
-                              </div> */}
+                                             <ProfileImage src="/public/test-image.jpg"  />
+                                        </div> */}
                                         <div className={style.card_text_container}>
                                              <h1 className={style.card_heading}>{items.firstName + "  " + items.lastName}</h1>
                                              {/* <p className='card-details'></p> */}
