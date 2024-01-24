@@ -8,8 +8,8 @@ export const ProfileImage = ({src}) => {
                     src={src}
                     alt="profile-image"
                     className='card-img'
-                    width={350}
-                    height={150}
+                    width={50}
+                    height={50}
                />
           </>
      )

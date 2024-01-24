@@ -38,4 +38,5 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 18). Use Client Components with Server Components
 19). Style components using css modules
 20). Conditional styling
+21). Image Optimization using Next Image Component
 ```
