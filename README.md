@@ -39,4 +39,5 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 19). Style components using css modules
 20). Conditional styling
 21). Image Optimization using Next Image Component
+22). Font Optimization 
 ```
