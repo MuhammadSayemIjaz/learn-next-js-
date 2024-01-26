@@ -37,3 +37,10 @@ const TeachersLogin = async () => {
 }
 
 export default TeachersLogin
+
+export function generateMetadata() {
+     return {
+       title: 'Teachers list',
+       description: "Teachers list page description"
+     }
+   }
