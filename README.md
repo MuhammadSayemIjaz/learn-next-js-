@@ -42,4 +42,5 @@ Topics Covered
 20). Conditional styling
 21). Image Optimization using Next Image Component
 22). Font Optimization 
+23). GenerateMetaData
 ```
