@@ -44,4 +44,5 @@ Topics Covered
 22). Font Optimization 
 23). GenerateMetaData
 24). Script Component for import libraries
+25). Loaders in Client and Server Components
 ```

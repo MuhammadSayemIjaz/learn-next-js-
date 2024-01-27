@@ -1,11 +1,12 @@
 "use client"
 import Link from 'next/link'
+import Loading from './loading';
 import Script from 'next/script';
 import React, { useEffect, useState } from 'react'
 
 const StudentsList = () => {
   const [students, setStudents] = useState([]);
-
+  const [isLoading , setIsLoading] = useState(true);
   // fetch students data from dummy API 
 
   const fetchStudents = async () => {
@@ -15,6 +16,7 @@ const StudentsList = () => {
         console.log(data);
         const { users } = data;
         setStudents(users);
+        setIsLoading(false);
         console.log(users)
       }).catch((error) => {
         console.log(error.code);
@@ -59,7 +61,7 @@ const StudentsList = () => {
       />
       <h1 className='text-center mt-3'>Students List</h1>
       <h1 className='text-center mt-3'>Total Records : {students.length}</h1>
-      <div className='ml-3'>
+      {isLoading ? <Loading /> : <div className='ml-3'>
         <ul>
           {students.map((value, index) => {
             const { id, lastName, firstName } = value;
@@ -68,7 +70,7 @@ const StudentsList = () => {
             </li>)
           })}
         </ul>
-      </div>
+      </div>}
     </div>
   )
 }
