@@ -43,4 +43,5 @@ Topics Covered
 21). Image Optimization using Next Image Component
 22). Font Optimization 
 23). GenerateMetaData
+24). Script Component for import libraries
 ```

@@ -1,5 +1,6 @@
 "use client"
 import Link from 'next/link'
+import Script from 'next/script';
 import React, { useEffect, useState } from 'react'
 
 const StudentsList = () => {
@@ -16,8 +17,8 @@ const StudentsList = () => {
         setStudents(users);
         console.log(users)
       }).catch((error) => {
-          console.log(error.code);
-          console.log(error);
+        console.log(error.code);
+        console.log(error);
       });
   }
 
@@ -50,12 +51,18 @@ const StudentsList = () => {
 
   return (
     <div className='main'>
+      <Script
+        src='/location.js'
+        onLoad={() => {
+          console.log("location loaded");
+        }}
+      />
       <h1 className='text-center mt-3'>Students List</h1>
       <h1 className='text-center mt-3'>Total Records : {students.length}</h1>
       <div className='ml-3'>
         <ul>
           {students.map((value, index) => {
-            const {id, lastName, firstName} = value;
+            const { id, lastName, firstName } = value;
             return (<li key={id}>
               <Link href={`/studentslist/${id}`} > Name:  {lastName + firstName} </Link>
             </li>)
