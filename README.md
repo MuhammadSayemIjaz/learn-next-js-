@@ -45,4 +45,7 @@ Topics Covered
 23). GenerateMetaData
 24). Script Component for import libraries
 25). Loaders in Client and Server Components
+26). Static Assets
+27). Production Build
+28). Static Site Generation
 ```
