@@ -3,21 +3,19 @@ import Link from 'next/link'
 import Loading from './loading';
 import Script from 'next/script';
 import React, { useEffect, useState } from 'react'
-
+import { STUDENTS_BASE_URL } from '@/config/constants';
 const StudentsList = () => {
   const [students, setStudents] = useState([]);
   const [isLoading , setIsLoading] = useState(true);
   // fetch students data from dummy API 
-
   const fetchStudents = async () => {
-    await fetch('https://dummyjson.com/users')
+    await fetch(STUDENTS_BASE_URL)
       .then(res => res.json())
       .then((data) => {
-        console.log(data);
         const { users } = data;
         setStudents(users);
         setIsLoading(false);
-        console.log(users)
+        console.log(users);
       }).catch((error) => {
         console.log(error.code);
         console.log(error);

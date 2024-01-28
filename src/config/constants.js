@@ -1,0 +1,1 @@
+export const STUDENTS_BASE_URL = process.env.NEXT_PUBLIC_STUDENTS_LIST_API;

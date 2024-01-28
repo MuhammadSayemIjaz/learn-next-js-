@@ -48,4 +48,6 @@ Topics Covered
 26). Static Assets
 27). Production Build
 28). Static Site Generation
+29). Redirection
+30). Environment Variables in Client and Server Components (In Client Components Use NEXT_PUBLIC in start of VARIABLE)
 ```
