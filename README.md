@@ -51,4 +51,5 @@ Topics Covered
 29). Redirection
 30). Environment Variables in Client and Server Components (In Client Components Use NEXT_PUBLIC in start of VARIABLE)
 31). API Routes
+32). GET API Using Static Data
 ```
