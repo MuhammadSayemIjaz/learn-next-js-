@@ -52,4 +52,5 @@ Topics Covered
 30). Environment Variables in Client and Server Components (In Client Components Use NEXT_PUBLIC in start of VARIABLE)
 31). API Routes
 32). GET API Using Static Data
+33). Show GET API Data defined in API ROUTES 
 ```
