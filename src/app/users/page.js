@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const getData = async () => {
      let data = await fetch(process.env.USERS_LIST_API)
      data = await data.json();
@@ -12,11 +14,13 @@ export default async function Users() {
                <h1 style={{ fontSize: 40 }}>Users List</h1>
                {
                     data.map((item) => (<>
-                         <div className="flex flex-col gap-2 mt-3">
-                              <p> <b>Usere Id :</b>  {item.id}</p>
-                              <p> <b>Users Email :</b>  {item.email}</p>
-                              <p> <b>User Name :</b>  {item.username}</p>
-                              <p> <b> Password:</b> {item.password}</p>
+                         <div className="flex flex-col gap-2 mt-3" key={item.id}>
+                              <Link href={`users/${item.id}`} >
+                                   <p> <b>Usere Id :</b>  {item.id}</p>
+                                   <p> <b>Users Email :</b>  {item.email}</p>
+                                   <p> <b>User Name :</b>  {item.username}</p>
+                                   <p> <b> Password:</b> {item.password}</p>
+                              </Link>
                          </div>
                     </>))
                }
