@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const getData = async (id) => {
      let data = await fetch(`${process.env.USERS_LIST_API}/${id}`)
      data = await data.json();
