@@ -1,15 +1,41 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 const Signup = () => {
   const route = useRouter();
-  const navigate = (name) => (route.push(name))
-  const register_user = (e) => {
-    e.preventDefault();
-    navigate("/");
+  const initialState = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    role: ''
   }
+  const [state, setState] = useState(initialState);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    // Update the state based on the input name
+    setState((prevInput) => ({
+      ...prevInput,
+      [name]: value,
+    }));
+  };
+  const navigate = (name) => (route.push(name))
+  const register_user = async (e) => {
+    e.preventDefault();
+
+    let response = fetch(process.env.USERS_LIST_API, {
+      method: "POST",
+      body: JSON.stringify(state)
+    });
+    let data = await response.json();
+    console.log(data);
+    // navigate("/");
+  }
+
   return (
     <>
       <div className='main'>
@@ -52,7 +78,7 @@ const Signup = () => {
                   </div>
                   <fieldset>
                     <div className="space-y-6">
-                    <label for="teacher" className="block text-sm font-medium leading-6 text-gray-900">Role</label>
+                      <label for="teacher" className="block text-sm font-medium leading-6 text-gray-900">Role</label>
                       <div className='flex gap-x-4 items-between justify-between'>
                         <div className="flex items-center gap-x-3">
                           <input id="teacher" name="role" type="radio" className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600" />
