@@ -10,5 +10,5 @@ export function GET() {
 export async function POST(request) {
      const payload = await request.json();
      console.log(payload);
-     return NextResponse.json({result: "Test"})
+     return NextResponse.json({result: "user created successfully", success: true}, {status: 201})
 }
