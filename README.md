@@ -55,4 +55,5 @@ Topics Covered
 33). Show GET API Data defined in API ROUTES 
 34). POST API 
 35). Integrate POST API With FORM
+36). PUT API 
 ```
